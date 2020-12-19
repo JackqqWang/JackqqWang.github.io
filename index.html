@@ -2,7 +2,33 @@
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <link rel="shortcut icon" type="image/png" href="pic/X.png">
+    <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #8d93ab;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+    <link rel="shortcut icon" type="image/png" href="pic/Q.png">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="keywords" content="Jiaqi Wang, Jack Wang, Wang Jiaqi, IST, CS, PSU, ZJU, Zhejiang University, Data Science, Security, Machine Learning, Privacy, Optimization"> 
     <meta name="description" content="Jiaqi Wang's Homepage">
@@ -33,12 +59,47 @@
 </head>
 
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
     <div id="layout-menu">
     <a href="#">Home</a>
-	<a href="#publications and projects">Projects</a>
-    <a href="#publications and projects">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
 	<a href="#experience">Experience</a>
         <!--<a href="#publications">Products</a> -->
         <!--<a href="#teaching">Teaching</a>-->
@@ -52,6 +113,7 @@
 
 <div id="layout-content" style="margin-top:25px">
 
+
 <table>
 	<tbody>
 		<tr>
@@ -60,7 +122,7 @@
 					<h1>Jiaqi (Jack) Wang<h1>
 				</div>
 
-				<h3>Ph.D. Candidate</h3>
+				<h3>Ph.D. Student</h3>
 				<p>
 					College of Information Sciences and Technology </br>
                     The Pennsylvania State University </br>
@@ -75,11 +137,13 @@
 				</p>
 			</td>
 			<td>
+                <!-- <img alt="" src="images/1.jpg" onMouseOver="this.src='pic/jiaqi.png'" onMouseOut="this.src='pic/Q.png'"> -->
                 <!--<img class="img-circle" src="pic/jiaqi.png" border="0" width="200px"></br> -->
-                <script language=javascript>
+                <!-- <script language=javascript>
                     id=Math.round(Math.random()*3)+1
                     document.write( "<img class=\"img-circle\" src=\""+id+".png\" order=\"0\" width=\"200px\"></br>")
-                </script>
+                </script> -->
+                <img class="img-circle" alt="" src="pic/jiaqi.png" onMouseOver="this.src='pic/full.png'" onMouseOut="this.src='pic/jiaqi.png'" border="0" width="250px">
 			</td>
 		<tr>
 	</tbody>
@@ -89,7 +153,7 @@
 
 <div id="bio">
 <h2>Bio</h2>
-<p style="text-align:justify; text-justify:inter-ideograph;"> Jiaqi (Jack) Wang is a Ph.D. candidate in the <a href="https://ist.psu.edu/"> College of Information Sciences and Technology</a> at <a href = "https://www.psu.edu/"> The Pennsylvania State University</a>.
+<p style="text-align:justify; text-justify:inter-ideograph;"> Jiaqi (Jack) Wang is a Ph.D. student in the <a href="https://ist.psu.edu/"> College of Information Sciences and Technology</a> at <a href = "https://www.psu.edu/"> The Pennsylvania State University</a>.
 He obtained his M.S. and B.Eng. at <a href="http://www.zju.edu.cn/english/">Zhejiang University</a>. He also visited <a href = "https://www.purdue.edu/"> Purdue University</a>,
 <a href="http://www.nus.edu.sg/">National University of Singapore</a>, and <a href="https://www.tum.de/"> Technische Universität München</a> as an exchange student.
 Currently he is working with Professor <a href="https://asquicciarini.ist.psu.edu/">Anna Cinzia Squicciarini</a> and <a href="http://www.personal.psu.edu/cxg286/">Christopher Griffin.</a></p>
@@ -100,13 +164,10 @@ Currently he is working with Professor <a href="https://asquicciarini.ist.psu.ed
 
 <ul>
     <li>
-        Data Science (Data Visulization, Statistical Learning, Time-series Data Analysis)
+        Social Network Mining (Data Privacy, Self-disclosure, Fairness, User Behavior Modeling)
     </li>
     <li>
-        Privacy and Securiy (Data Privacy, IoT Security, Fairness)
-    </li>
-    <li>
- 	Applied Dynamical Systems and Optimization (Dynamical System Modeling, Optimization, Game Theory)
+ 	    Applied Dynamical Systems and Optimization (Dynamical System Modeling, Optimization, Game Theory)
     </li>
     <li>
         Machine Learning Application (Apply machine learning techniques to solve real-world problems)
@@ -144,7 +205,9 @@ More specifically,
         <tr valign="top"> <td>[<b>NEW!</b>] </td> <td> I am serving as an Area Chair for <a href="https://2020.emnlp.org">EMNLP 2020</a>. </td></tr>
         <tr valign="top"> <td>[<b>NEW!</b>] </td> <td> Organizing the <a href="https://alvr-workshop.github.io">workshop on Advances in Language and Vision Research (ALVR)</a> at ACL 2020. Welcome to participate on <b>July 9th</b>!</td></tr>
         <tr valign="top"> <td>[03/2020] </td> <td> Invited panelist at the <a href="https://www.nvidia.com/en-us/gtc/"> GPU Technology Conference (GTC) 2020. </td></tr>
-        <!-- <tr valign="top"> <td>[01/2020] </td> <td> Invited talk at Toyota Technological Institute at Chicago (TTIC).</td></tr> -->
+       <tr valign="top"> <td>[01/2020] </td> <td> Invited talk at Toyota Technological Institute at Chicago (TTIC).</td></tr> -->
+    <tr valign="top"> <td>[11/2020] </td> <td> I was invited served as a session chair at <a href="http://www.ieee-cybermatics.org/2020/cybermatics/"> IEEE Cybermatics Congress 2020</a>.</td></tr>
+    <tr valign="top"> <td>[10/2020] </td> <td> I was invited give a talk at <a href="https://www.kennesaw.edu/"> Kennesaw State University</a>. Thank <a href="http://ksuweb.kennesaw.edu/~xxu6/">Dr. Xu</a> for host.</td></tr>
     <tr valign="top"> <td>[10/2020] </td> <td> One paper was accepted by <a href="http://noisy-text.github.io/2020/"> W-NUT 2020</a>.</td></tr>
     <tr valign="top"> <td>[09/2020] </td> <td> Served as an external Reviewer for <a href="http://www.wsdm-conference.org/2021/"> WSDM 2021</a>.</td></tr>   
 	<tr valign="top"> <td>[08/2020] </td> <td> Served as an external Reviewer for <a href="https://www.sigsac.org/ccs/CCS2020/"> CCS 2020</a>.</td></tr>
@@ -168,122 +231,369 @@ More specifically,
 <br><br>
 
 
-<div id="publications and projects">
-<h2>Selected Publications and Projects</h2>
-<table>
-    <tr>
-        <td width="306">
-        <img src="indexpics/multi_agent.png" width="285px" height="180px" style="box-shadow: 4px 4px 8px #888">
-        </td>
-        <td>
-            <p>
-                <b>Multi-agent System Dynamic Modelling and Optimization with Neural Networks</b><br>
-                <em>Advised by Anna Cinzia Squicciarini and Christopher Griffin</em><br>
-        <em>To be submitted to WWW 2021</em>
-        <p style="text-align:justify; text-justify:inter-ideograph;"> We are working on modelling
-            multi-agent dynamic system and finding the balance between the intimacy and privacy of multi agents. 
-            Furthermore, we expect to design general privacy preserving mechanisms in dynamic 
-            agent-based networks under different settings in practical application scenarios.
-        </p></br>
-                <!--- <em>2017 MAX Sneak</em> <br>
-                <em>2018 MAX Keynote</em> <br> --->
-                <!---  <font color="red"><em>Featured in Adobe After Effects! <a href="https://www.theverge.com/2019/4/3/18293526/adobe-after-effects-content-aware-fill-remove-unwanted-objects-videos">Link</a></em></font>
-            <p></p>
-            <p> 
-            [<a href="https://research.adobe.com/cloak-remove-unwanted-objects-in-video/">Project</a>]
-            [<a href="https://theblog.adobe.com/peek-behind-sneaks-filmmakers-gain-power-invisibility/">Blog</a>]
-            [<a href="https://www.youtube.com/watch?v=TzBZWBht02I">Video</a>]
-            </p>--->
-        </td>
-    </tr>
 
-
-    <tr>
-        <td width="306">
-        <img src="indexpics/reddit.png" width="285px" height="180px" style="box-shadow: 4px 4px 8px #888">
-        </td>
-        <td>
-            <p>
-                <b>Tracing Communities through Longitudinal Reddit Data using Dynamic Bipartite Graphs</b><br>
-                <em>Advised by Anna Cinzia Squicciarini and Christopher Griffin</em><br>
-		<em>Submitted to 2020 ASONAM</em>
-		<p style="text-align:justify; text-justify:inter-ideograph;"> To understand users' social network dynamics, we carry a longitudinal analysis of Reddit users' activities over a 12 month period, using data provided by volunteer users. User to subreddit interactions can be described as a dynamic bipartite graph with monthly snapshots treated as a random bipartite graph. Using this graph structure, user communities based on common interests can be identified and their dynamics can be analyzed.</p>
-               <!--- <em>2017 MAX Sneak</em> <br>
-                <em>2018 MAX Keynote</em> <br> --->
-                <!---  <font color="red"><em>Featured in Adobe After Effects! <a href="https://www.theverge.com/2019/4/3/18293526/adobe-after-effects-content-aware-fill-remove-unwanted-objects-videos">Link</a></em></font>
-            <p></p>
-            <p> 
-            [<a href="https://research.adobe.com/cloak-remove-unwanted-objects-in-video/">Project</a>]
-            [<a href="https://theblog.adobe.com/peek-behind-sneaks-filmmakers-gain-power-invisibility/">Blog</a>]
-            [<a href="https://www.youtube.com/watch?v=TzBZWBht02I">Video</a>]
-            </p>--->
-        </td>
-    </tr>
-
-    <tr>
+<div id="projects">
+    <h2>Selected Projects</h2>
+    <table>
+        
+        <tr>
             <td width="306">
-            <img src="indexpics/taxi.png" width="285px" height="170px" style="box-shadow: 4px 4px 8px #888">
+            <img src="indexpics/Twitter.png" width="285px" height="180px" style="box-shadow: 4px 4px 8px #888">
             </td>
             <td>
                 <p>
-                    <b>New York City Taxi Trip Duration</b><br>
-                    <em>In collabration with <a href="http://hua-shen.org/"> Hua Shen</a></em><br>
-                    <p style="text-align:justify; text-justify:inter-ideograph;"> 
-                            Finished data cleaning, data visualization, data processing, 
-                            feature engineering, model selection, parameter optimization to predict taxi trip duration in New York City.
-                             We calculated and divided our features into different categories such as temporal features, geospatial features,
-                              and neighbor features. Rank around top 10\% in the Kaggle competition.
-                    </p>
+                    <b>Semantic-based Self-disclosure Analysis on Online Social Networks</b><br>
+                    <em>Advised by Anna Cinzia Squicciarini</em><br>
+            <em>In process</em>
+            <!-- <p style="text-align:justify; text-justify:inter-ideograph;"> We are working on modelling
+                multi-agent dynamic system and finding the balance between the intimacy and privacy of multi agents. 
+                Furthermore, we expect to design general privacy preserving mechanisms in dynamic 
+                agent-based networks under different settings in practical application scenarios.
+            </p></br> -->
+                    <!--- <em>2017 MAX Sneak</em> <br>
+                    <em>2018 MAX Keynote</em> <br> --->
+                    <!---  <font color="red"><em>Featured in Adobe After Effects! <a href="https://www.theverge.com/2019/4/3/18293526/adobe-after-effects-content-aware-fill-remove-unwanted-objects-videos">Link</a></em></font>
+                <p></p>
                 <p> 
+                [<a href="https://research.adobe.com/cloak-remove-unwanted-objects-in-video/">Project</a>]
+                [<a href="https://theblog.adobe.com/peek-behind-sneaks-filmmakers-gain-power-invisibility/">Blog</a>]
+                [<a href="https://www.youtube.com/watch?v=TzBZWBht02I">Video</a>]
+                </p>--->
+            </td>
+        </tr>
+
+        <tr>
+            <td width="306">
+            <img src="indexpics/multi_agent.png" width="285px" height="180px" style="box-shadow: 4px 4px 8px #888">
+            </td>
+            <td>
+                <p>
+                    <b>Privacy-preserving Strategies In Consensus Network Dynamics and Optimization with Neural Networks</b><br>
+                    <em>Advised by Anna Cinzia Squicciarini and Christopher Griffin</em><br>
+            <em>Submitted to WWW 2021</em>
+            <p style="text-align:justify; text-justify:inter-ideograph;"> We are working on modelling
+                multi-agent dynamic system and finding the balance between the intimacy and privacy of multi agents. 
+                Furthermore, we expect to design general privacy preserving mechanisms in dynamic 
+                agent-based networks under different settings in practical application scenarios.
+            </p></br>
+                    <!--- <em>2017 MAX Sneak</em> <br>
+                    <em>2018 MAX Keynote</em> <br> --->
+                    <!---  <font color="red"><em>Featured in Adobe After Effects! <a href="https://www.theverge.com/2019/4/3/18293526/adobe-after-effects-content-aware-fill-remove-unwanted-objects-videos">Link</a></em></font>
+                <p></p>
+                <p> 
+                [<a href="https://research.adobe.com/cloak-remove-unwanted-objects-in-video/">Project</a>]
+                [<a href="https://theblog.adobe.com/peek-behind-sneaks-filmmakers-gain-power-invisibility/">Blog</a>]
+                [<a href="https://www.youtube.com/watch?v=TzBZWBht02I">Video</a>]
+                </p>--->
+            </td>
+        </tr>
+    
+    
+        <tr>
+            <td width="306">
+            <img src="indexpics/reddit.png" width="285px" height="180px" style="box-shadow: 4px 4px 8px #888">
+            </td>
+            <td>
+                <p>
+                    <b>Tracing Communities through Longitudinal Reddit Data using Dynamic Bipartite Graphs</b><br>
+                    <em>Advised by Anna Cinzia Squicciarini and Christopher Griffin</em><br>
+            <em>Submitted to ASONAM 2020</em>
+            <p style="text-align:justify; text-justify:inter-ideograph;"> To understand users' social network dynamics, we carry a longitudinal analysis of Reddit users' activities over a 12 month period, using data provided by volunteer users. User to subreddit interactions can be described as a dynamic bipartite graph with monthly snapshots treated as a random bipartite graph. Using this graph structure, user communities based on common interests can be identified and their dynamics can be analyzed.</p>
+                   <!--- <em>2017 MAX Sneak</em> <br>
+                    <em>2018 MAX Keynote</em> <br> --->
+                    <!---  <font color="red"><em>Featured in Adobe After Effects! <a href="https://www.theverge.com/2019/4/3/18293526/adobe-after-effects-content-aware-fill-remove-unwanted-objects-videos">Link</a></em></font>
+                <p></p>
+                <p> 
+                [<a href="https://research.adobe.com/cloak-remove-unwanted-objects-in-video/">Project</a>]
+                [<a href="https://theblog.adobe.com/peek-behind-sneaks-filmmakers-gain-power-invisibility/">Blog</a>]
+                [<a href="https://www.youtube.com/watch?v=TzBZWBht02I">Video</a>]
+                </p>--->
+            </td>
+        </tr>
+    
+        <tr>
+                <td width="306">
+                <img src="indexpics/taxi.png" width="285px" height="150px" style="box-shadow: 4px 4px 8px #888">
+                </td>
+                <td>
+                    <p>
+                        <b>New York City Taxi Trip Duration</b><br>
+                        <em>In collabration with <a href="http://hua-shen.org/"> Hua Shen</a></em><br>
+                        <p style="text-align:justify; text-justify:inter-ideograph;"> 
+                                Finished data cleaning, data visualization, data processing, 
+                                feature engineering, model selection, parameter optimization to predict taxi trip duration in New York City.
+                                 We calculated and divided our features into different categories such as temporal features, geospatial features,
+                                  and neighbor features. Rank around top 10\% in the Kaggle competition.
+                        </p>
+                    <p> 
+            
+                    <!---[<a href="https://www.youtube.com/watch?v=IbVwC-eDjiE">Video</a>]--->
+                    </p>
+                </td>
+            </tr>
         
+        
+        
+        <tr>
+            <td width="306">
+            <img src="indexpics/multi.png" width="285px" height="140px" style="box-shadow: 4px 4px 8px #888">
+            </td>
+            <td>
+                <p>
+                    <b>Multi-object Tracking in Videos</b><br>
+                    <em>In collabration with <a href="https://sites.google.com/site/yshicv/"> Yang Shi</a> and Sili Wang </em><br>
+                    <p style="text-align:justify; text-justify:inter-ideograph;"> A framework of multi-object tracking in videos was proposed and implemented from base models, the RetinaNet and the MemTrack network. </p></br>
+                <p> 
+                [<a href="./project/objective.pdf">Report</a>]
                 <!---[<a href="https://www.youtube.com/watch?v=IbVwC-eDjiE">Video</a>]--->
                 </p>
             </td>
         </tr>
-	
-	
-	
-    <tr>
-        <td width="306">
-        <img src="indexpics/multi.png" width="285px" height="170px" style="box-shadow: 4px 4px 8px #888">
-        </td>
-        <td>
+    
+        <tr>
+            <td width="306">
+            <img src="indexpics/pi.png" width="285px" height="140px" style="box-shadow: 4px 4px 8px #888">
+            </td>
+            <td>
+                <p>
+                    <b>Cyber-Physical System Security through Energy Auditing</b><br>
+                    <!---<em>In collabration with <a href="https://sites.google.com/site/yshicv/"> Yang Shi</a> and Sili Wang </em><br>--->
+                    <p style="text-align:justify; text-justify:inter-ideograph;">Designed a real-time energy meter system to monitor the IoT system. This work is the foundation to detect and identify IoT cyber or physical attacks based on energy auditing. Voltage, current and power consumption can be read and transmitted wirelessly. </p></br>
+                    <!---<font color="red"><em>Honored to present the product prototype to the Adobe CEO Shantanu Narayen face to face</em></font>--->
+    
+                <p> 
+         
+                <!---[<a href="https://www.youtube.com/watch?v=IbVwC-eDjiE">Video</a>]--->
+                </p>
+            </td>
+        </tr>	
+        
+        
+        
+        
+        
+    </table>
+    </div>
+
+<br><br>
+
+
+
+
+
+
+<div id="publications">
+    <h2> Selected Publications</h2>
+    
+    <!-- <h3>Preprint</h3> -->
+    <table id="tbPublications" width="100%">
+        <tr>
+            <td width="100%">
             <p>
-                <b>Multi-object Tracking in Videos</b><br>
-                <em>In collabration with <a href="https://sites.google.com/site/yshicv/"> Yang Shi</a> and Sili Wang </em><br>
-                <p style="text-align:justify; text-justify:inter-ideograph;"> A framework of multi-object tracking in videos was proposed and implemented from base models, the RetinaNet and the MemTrack network. </p></br>
-            <p> 
-            [<a href="./project/objective.pdf">Report</a>]
-            <!---[<a href="https://www.youtube.com/watch?v=IbVwC-eDjiE">Video</a>]--->
+                <b>Toward an Interactive Online Course Framework</b><br>
+                <b>Jiaqi Wang</b>, <a href="https://chacha-chen.github.io/">Chacha Chen</a>, <a href="http://hua-shen.org/">Hua Shen</a>, <a href = "https://crowd.ist.psu.edu/index.html">Ting-Hao Huang</a>, <a href = "http://www.frankritter.com/ritter.html">Frank E Ritter</a><br>
+                <em>Submitted to CHI Case Studies 2021</em><br>
+                <!-- <font color="red">Ranking 1st on the CVDN leaderboard</font><br> 
+                [<a href="https://arxiv.org/abs/2007.00229">Paper</a>]
+                [<a href="https://github.com/google-research/valan">Code</a>]  -->
             </p>
-        </td>
-    </tr>
-
-    <tr>
-        <td width="306">
-        <img src="indexpics/pi.png" width="285px" height="170px" style="box-shadow: 4px 4px 8px #888">
-        </td>
-        <td>
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="100%">
             <p>
-                <b>Cyber-Physical System Security through Energy Auditing</b><br>
-                <!---<em>In collabration with <a href="https://sites.google.com/site/yshicv/"> Yang Shi</a> and Sili Wang </em><br>--->
-                <p style="text-align:justify; text-justify:inter-ideograph;">Designed a real-time energy meter system to monitor the IoT system. This work is the foundation to detect and identify IoT cyber or physical attacks based on energy auditing. Voltage, current and power consumption can be read and transmitted wirelessly. </p></br>
-                <!---<font color="red"><em>Honored to present the product prototype to the Adobe CEO Shantanu Narayen face to face</em></font>--->
-
-            <p> 
-     
-            <!---[<a href="https://www.youtube.com/watch?v=IbVwC-eDjiE">Video</a>]--->
+                <b>Privacy-preserving Strategies In Consensus Network Dynamics</b><br>
+                <b>Jiaqi Wang</b>, Christopher Griffin, Anna Cinzia Squicciarini<br>
+                <em>Submitted to WWW 2021</em><br>
+            <!-- [<a href="http://arxiv.org/abs/1910.11301">Paper</a>] -->
             </p>
-        </td>
-    </tr>	
-	
-	
-	
-	
-	
-</table>
+            </td>
+        </tr>
 
+        <tr>
+            <td width="100%">
+            <p>
+                <b>Tracing Communities through Longitudinal Reddit Data using Dynamic Bipartite Graphs</b><br>
+                <b>Jiaqi Wang</b>, Christopher Griffin, Anna Cinzia Squicciarini<br>
+                <em>Submitted to ASONAM 2020</em><br>
+            <!-- [<a href="http://arxiv.org/abs/1910.11301">Paper</a>] -->
+            </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="100%">
+            <p>
+                <b>Joint Event Multi-task Learning for Slot Filling in Noisy Text</b><br>
+                <a href="https://chacha-chen.github.io/">Chacha Chen</a>, <a href="https://appleternity.github.io/chieh-yang/">Chieh-Yang Huang</a>, Yaqi Hou, <a href="https://sites.google.com/site/yshicv/"> Yang Shi</a>, Enyan Dai, <b>Jiaqi Wang*</b><br>
+                <em>In Proceedings of the Workshop on Noisy User-generated Text (W-NUT, EMNLP 2020)</em><br>
+                [<a href="https://arxiv.org/pdf/2009.14262.pdf">Paper</a>]
+                [<a href="https://github.com/JackqqWang/JOELIN">Code</a>]
+            </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="100%">
+            <p>
+                <b>Present situation and future prospect of renewable energy in China</b><br>
+                Dahai Zhang, <b>Jiaqi Wang</b>, Yonggang Lin, Yulin Si, Can Huang, Jing Yang, Bin Huang, Wei Li<br>
+                <em>Renewable and Sustainable Energy Reviews (TOP SCI，IF: 9.184)</em><br>
+                [<a href="https://www.sciencedirect.com/science/article/abs/pii/S1364032117303416">Paper</a>]
+            </p>
+            </td>
+        </tr>
+    </table>
+    
+<!-- 
+
+
+    
+    <!-- <h3>2020</h3>
+    <table id="tbPublications" width="100%">
+        <tr>
+            <td width="100%">
+            <p>
+                <b>Environment-agnostic Multitask Learning for Natural Language Grounded Navigation</b><br>
+                <b>Xin Eric Wang</b>*, Vihan Jain*, Eugene Ie, William Wang, Zornitsa Kozareva, Sujith Ravi<br>
+                <em>ECCV 2020</em><br>
+                <font color="red">Ranking 1st on the CVDN leaderboard</font><br>
+                [<a href="http://arxiv.org/abs/2003.00443">Paper</a>]
+                [<a href="https://github.com/google-research/valan">Code</a>]
+            </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="306">
+            <p>
+                <b>Counterfactual Vision-and-Language Navigation via Adversarial Path Sampling</b><br>
+                Tsu-Jui Fu, <b>Xin Eric Wang</b>, Matthew Peterson, Scott Grafton, Miguel Eckstein, William Yang Wang<br>
+                <em>ECCV 2020</em><br>
+                <font color="red">Spotlight presentation</font><br>
+            [<a href="https://arxiv.org/abs/1911.07308">Paper</a>]
+            </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="306">
+            <p>
+                <b> REVERIE: Remote Embodied Visual Referring Expression in Real Indoor Environments</b><br>
+                Yuankai Qi, Qi Wu, Peter Anderson, <b>Xin Wang</b>, William Yang Wang, Chunhua Shen, Anton van den Hengel<br>
+                <em>CVPR 2020</em><br>
+                <font color="red">Oral presentation</font><br>
+            [<a href="https://arxiv.org/abs/1904.10151">Paper</a>]
+            [<a href="https://github.com/YuankaiQi/REVERIE">Code</a>]
+            </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="306">
+            <p>
+                <b>Unsupervised Reinforcement Learning of Transferable Meta-Skills for Embodied Navigation</b><br>
+                Juncheng Li, <b>Xin Wang</b>, Siliang Tang, Haizhou Shi, Fei Wu, Yueting Zhuang, William Yang Wang<br>
+                <em>CVPR 2020</em><br>
+            [<a href="https://arxiv.org/abs/1911.07450">Paper</a>]
+            </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="100%">
+             <img src="indexpics/KGZS.png" width="285px" height="140px" style="box-shadow: 4px 4px 8px #888"> -->
+           <!-- </td> -->
+            <!-- <td> 
+                <p>
+                    <b>Vision-Language Navigation Policy Learning and Adaptation</b> <br>
+                    <b>Xin Wang</b>, Qiuyuan Huang, Asli Celikyilmaz, Jianfeng Gao, Dinghan Shen, Yuan-Fang Wang, William Yang Wang, Lei Zhang <br>
+                    <em> IEEE transactions on pattern analysis and machine intelligence (TPAMI), 2020</em> <br>
+                    <font color="red">Journal version of the CVPR 2019 Best Student Paper</font>
+                <p></p>
+                <p> 
+                   [<a href="https://arxiv.org/abs/2001.02332">paper</a>]
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="100%">
+                <p>
+                    <b> Generative Adversarial Zero-Shot Relational Learning for Knowledge Graphs</b> <br>
+                    Pengda Qin, <b>Xin Wang</b>, Wenhu Chen, Chunyun Zhang, Weiran Xu, William Yang Wang<br>
+                    <em> AAAI 2020</em> <br>
+                    <font color="red">Oral presentation</font><br>
+                [<a href="https://arxiv.org/abs/2001.02332">Paper</a>]
+                [<a href="https://github.com/Panda0406/Zero-shot-knowledge-graph-relational-learning">Code</a>]
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+    <h3>2019</h3>
+    <table>
+        <tr>
+            <td width="100%">
+                <p>
+                    <b>TIGEr: Text-to-Image Grounding for Image Caption Evaluation </b> <br>
+                    Ming Jiang, Qiuyuan Huang, Lei Zhang, <b>Xin Wang</b>, Pengchuan Zhang, Zhe Gan, Jana Diesner, Jianfeng Gao<br>
+                    <em> EMNLP-IJCNLP 2019</em> <br>
+                [<a href="https://arxiv.org/abs/1909.02050">Paper</a>]
+                [<a href="https://github.com/SeleenaJM/CapEval">Code</a>]
+                [<a href="javascript:void(0)" onclick="toggle_visibility('tiger_bibtex');">bibtex</a>]
+                </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td width="100%">
+                <p>
+                    <b>VATEX: A Large-Scale, High-Quality Multilingual Dataset for Video-and-Language Research</b> <br>
+                    <b>Xin Wang</b>*, Jiawei Wu*, Junkun Chen, Lei Li, Yuan-Fang Wang, William Yang Wang<br>
+                    <em> ICCV 2019</em> <br>
+                    <font color="red">Oral presentation</font><br>
+                [<a href="https://arxiv.org/abs/1904.03493">Paper</a>]
+                [<a href="http://vatex-challenge.org">Website</a>]
+                [<a href="javascript:void(0)" onclick="toggle_visibility('vatex_bibtex');">bibtex</a>]
+                <div id='vatex_bibtex' style="display:none; font-size:small;">
+                    @InProceedings{Wang_2019_ICCV, <br>
+                    author = {Wang, Xin and Wu, Jiawei and Chen, Junkun and Li, Lei and Wang, Yuan-Fang and Wang, William Yang}, <br>
+                    title = {VaTeX: A Large-Scale, High-Quality Multilingual Dataset for Video-and-Language Research},<br>
+                    booktitle = {The IEEE International Conference on Computer Vision (ICCV)},<br>
+                    month = {October},<br>
+                    year = {2019}<br>
+                    }
+                </div>
+                </p>
+            </td>
+        </tr>
+    </table> --> 
+  
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 	
@@ -396,7 +706,7 @@ More specifically,
     <tr>
         <td>
             <p> <a href = "https://www.usgs.gov/"> USGS </a>, GA, US</p>
-            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Research Scientist Intern, &nbsp Summer 2019</p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Research Scientist Intern, &nbsp Spring 2019</p>
         </td>
         <td align="center">
             <p><img src="logos/USGS.png" height=60px></p>
@@ -1051,7 +1361,7 @@ More specifically,
 <li>
 	
     <b>Conference Program Committee or Reviewer: </b>
-    <a href="http://noisy-text.github.io/2020/"> W-NUT 2020</a>, $nbsp
+    <a href="http://noisy-text.github.io/2020/"> W-NUT 2020</a>, &nbsp
     <a href="http://www.wsdm-conference.org/2021/"> WSDM 2021</a>, &nbsp
     <a href="https://www.sigsac.org/ccs/CCS2020/"> CCS 2020</a>, &nbsp
 	<a href="https://www.ipccc.org/"> IEEE IPCCC 2020</a>, &nbsp
@@ -1074,8 +1384,19 @@ More specifically,
 	<p style="margin-top:3px">
 	</p>		
 </li>
+
 <li>
-	
+    
+    
+    
+    <b>Session Chair: </b>
+    <a href="http://www.ieee-cybermatics.org/2020/cybermatics/"> IEEE Cybermatics Congress 2020</a> &nbsp	
+    <p style="margin-top:3px">
+    </p>        
+</li>
+
+<li>
+4
     <b>Judge: </b>
         <a href="https://www.comap.com/undergraduate/contests/"> MCM 2019, 2020</a> &nbsp	
     <p style="margin-top:3px">
@@ -1121,6 +1442,10 @@ More specifically,
     <p style="margin-top:3px"></p>        
 </li>
 <li>
+    <b>Limited people are contributing to the world, while most ones are enjoying it.</b>	
+    <p style="margin-top:3px"></p>        
+</li>
+<li>
     <b>Co-founder of <a href="https://www.fablabs.io/labs/fabei"> Fablab Hangzhou</a>.</b> One of our targets is to help disable children education via developing educational tools.
     <p style="margin-top:3px"></p>        
 </li>
@@ -1136,8 +1461,8 @@ More specifically,
 	<!-- <div id="footer-text"></div> -->
 <p>
 <center>
-    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=cbe090&w=300&d=aJJ1wUAUT3iAzbbM3So9Rj0rh8-XOWIxZRgWKqOvcDk&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
-
+    <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=cbe090&w=300&d=aJJ1wUAUT3iAzbbM3So9Rj0rh8-XOWIxZRgWKqOvcDk&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script> -->
+    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=FCxcl2_big3T4rMqnah_ewYaFcEKJ6hDiu0n41inbZA"></script>
     <br>
     &copy; Jiaqi (Jack) Wang
 </center>
