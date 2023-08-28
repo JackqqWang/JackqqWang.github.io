@@ -1,5 +1,5 @@
 ﻿body { 
-  	font-family: Verdana, sans-serif;
+  	font-family: Verdana, sans-serif, monospace;
 	color:#303030;
 	background:#fff;
 	text-align:center; /* for IE */
@@ -24,7 +24,7 @@ a:hover {
   text-decoration: underline;
 }
 img { border: 0; }
-h1,h2,h3 { font-family: Cambria, Helvetica, Arial, Verdana, san-serif; }
+h1,h2,h3 { font-family: Cambria, Helvetica, Arial, Verdana, san-serif, monospace; }
 
 .style1 {
 	text-align: center;
