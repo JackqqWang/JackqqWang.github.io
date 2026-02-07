@@ -2,6 +2,27 @@
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #8d93ab;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+</style>
 <link rel="shortcut icon" type="image/png" href="pic/Q.png">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="keywords" content="Jiaqi Wang, Jack Wang, Wang Jiaqi, IST, CS, PSU, ZJU, Zhejiang University, Data Science, Security, Machine Learning, Privacy, Optimization"> 
@@ -41,16 +62,42 @@
 
 </head>
 <body >
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
+
+    
 
 
 <div id="layout-menu">
     <a href="./index.html">Home</a>
-    <a href="./index.html#news">News</a>
-    <a href="./index.html#experience">Experience</a>
-    <a href="./index.html#publications">Publications</a>
-    <!-- <a href="./index.html#publications">Products</a> -->
-    <a href="./index.html#teaching">Teaching</a>
-    <a href="./index.html#service">Service</a>
+    <a href="./group.html#Group Introduction">RIDER LAB</a>
+    <a href="./group.html#Research Directions">Research</a>
+    <a href="./group.html#Students">People</a>
+    <a href="./group.html#Opening">Opening</a>
+    <a href="./group.html#pleasure">Pleasure</a>
+    <!-- <a href="./index.html#service">Service</a> -->
     <!-- <a href="./CV_Xin_Wang.pdf">CV</a> -->
 </div>
 
@@ -59,12 +106,21 @@
 
 <br>
 
+<div id="Group Introduction">
+
 <h2>Group Introduction</h2>
 <p style="text-align: justify;">
-    Welcome to our lab in the Department of Computer Science and Software Engineering at Auburn University. Our research is driven by a passion for uncovering the elegance of foundational science and expanding the frontiers of knowledge. We focus on collaborative machine learning, multimodal foundation models, and the grounding of AI in real-world applications, especially healthcare.<br>
+    Welcome to <b>R</b>espons<b>i</b>ble an<b>d</b> Int<b>er</b>active Intelligence (<b>RIDER</b>) Lab.
+     Our research is driven by a passion for uncovering the elegance of foundational science and expanding the frontiers of knowledge.
+      We focus on responsible and interactive machine learning, multimodal foundation models/LLMs, and the grounding of AI in real-world applications, 
+      especially healthcare.<br>
     <!-- We are currently exploring: (1) The interplay between machine intelligence and human intelligence; (2)
     Knowledge grounding in healthcare and beyond. -->
 </p>
+</div>
+
+
+<div id="Research Directions">
 
 <h2 style="margin-top: 0;">Research Directions</h2>
 <div align="justify">The following are my interested research directions, which means they might not be yours. I am open to discuss further with you to find the topics we are both excited about based on your interest and background.</div>
@@ -95,6 +151,7 @@
     </li>
 </ul>
 
+</div>
 <!-- <h3>Research Directions</h3>
 The following are my interested research directions, which means they might not be yours. I am open to discuss further with you to find the topics we are both excited about based on your interest and background.
 <ul>
@@ -108,6 +165,11 @@ The following are my interested research directions, which means they might not 
         <font color="darkred"Healthcare and other applications</font>: please email me directly with your CV and transcript. For MS students and undergraduates, the minimum time commitment is 20 hours per week for six months.
     </li>
 </ul> -->
+
+
+<br>
+
+<div id="Students">
 
 <h2>PhD Students</h2>
 <br>
@@ -127,9 +189,9 @@ The following are my interested research directions, which means they might not 
 </tr>
 </table>
 
+</div>
 
-
-
+<div id="Opening">
 <h2>Openings</h2>
 I enjoy working with ambitious, self-motivated, and talented students.
 <ul>
@@ -138,8 +200,8 @@ I enjoy working with ambitious, self-motivated, and talented students.
         <ul>
             
             <li><div align="justify">
-                I have fully-funded openings for Spring and Fall 2026.
-                 If you are interested, please submit your application and then send your CV, transcripts, and a brief intro, which could be research, internships, proud achievements, fun experiences, or anything unique that may not appear on your CV.</div></li>
+                I have fully-funded openings for Fall 2026.
+                 If you are interested, please submit your application and then send your CV, transcripts, and a brief intro.</div></li>
             <li>A background in CS, mathematics, statistics, informatics, data science, ECE, or related fields is not strictly required. However, strong programming skills, experience with machine learning, and solid logical thinking are expected. Publication experience is a plus but not necessary.</li>
             <!-- <li></li> -->
             <li>TOEFL>=79, IELTS>=6.5, GRE is not required. TOEFL requirements may be waived for international students who have earned a bachelor’s or master’s degree from an accredited institution in the U.S. or another English-speaking country, depending on the official language and medium of instruction. Auburn CS graduate program requirements: please check the <a href="https://www.eng.auburn.edu/program/phd-computer-science-software-engineering.html">link</a>.</li>
@@ -165,6 +227,7 @@ I enjoy working with ambitious, self-motivated, and talented students.
    
 
 </ul>
+</div>
 <!-- 
 
 <h3>Why UCSC</h3>
@@ -185,6 +248,7 @@ Third, I require my students to be <font color="darkred">proficient in programmi
 
 Last and probably the most important: <font color="darkred">hard-working and reliable</font>. No matter how smart you are and what fields you are in, if you don't spend enough time on your work, there is no way you can be an expert. An observation from the most successful PhD students is that they are all reliable and work extremely hard. In summary, if you are a hard-working, reliable person who is passionate about advancing AI and solid in Math and programming, please consider applying to UCSC. -->
 
+<div id="pleasure">
 <h2>My Pleasure</h2>
 <ul>
     <li> 
