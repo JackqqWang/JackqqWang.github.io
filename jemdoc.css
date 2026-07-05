@@ -36,27 +36,24 @@ body {
 }
 
 #layout-menu {
-	/* background: #f6f6f6; */
 	background: #f6f6f6;
-	/*border: 1px solid #dddddd;*/
 	padding-top: 0.4em;
-	padding-bottom: 1.8em;
-	padding-left: 50px;
-	padding-right: 0px;
-	font-size: 1.0em;
-	width: auto;
-	white-space: nowrap;
-    /*text-align: left;*/
-    /*vertical-align: top;*/
+	padding-bottom: 0.4em;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 1.2em;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 #layout-menu a {
     list-style-type: none;
-    float: left;
-    width: 15%;    
     text-align: center;
     line-height: 1.5em;
-	margin-left: 0.5em;
+    padding: 0.3em 1em;
 }
 
 #layout-menu td {
